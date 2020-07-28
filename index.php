@@ -1,11 +1,11 @@
 <?php
     // Dia 28/07/2020 02:07
     // Criando uma API/Servidor JSON com PHP
-    
+
     //Dividindo URL pela /
     $path = explode('/', $_GET['path']);
 
-    //carrega banco 
+    //carrega banco
     $contents = file_get_contents('db.json');
 
     $json = json_decode($contents, true);
@@ -27,7 +27,7 @@
 
     if($method === 'POST'){
         $jsonBody = json_decode($body, true);
-            
+
         //Defina ID
         $jsonBody['id'] = time();
 
